@@ -1,0 +1,236 @@
+var swiper = new Swiper(".slide-container", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+  },
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+var swiper = new Swiper(".slide-adds", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  sliderPerGroup: 2,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+    autoplay: {
+    delay: 5000,
+  },
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    1000: {
+      slidesPerView: 2,
+    },
+  },
+});
+
+
+var swiper = new Swiper(".slide-rankings", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  sliderPerGroup: 5,
+  loop: true,
+   autoplay: {
+    delay: 2000,
+  },
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination1",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+var swiper = new Swiper(".slide-alumni", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: true,
+   autoplay: {
+    delay: 5000,
+  },
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    //dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+
+AOS.init();
+
+
+/* ---------------------	
+		back-top
+/* --------------------- */
+
+if ($('#back-top').length) {
+
+    var scrollTrigger = 100, // px
+
+        backToTop = function () {
+
+            var scrollTop = $(window).scrollTop();
+
+            if (scrollTop > scrollTrigger) {
+
+                $('#back-top').addClass('show');
+
+            } else {
+
+                $('#back-top').removeClass('show');
+
+            }
+
+        };
+
+    backToTop();
+
+    $(window).on('scroll', function () {
+
+        backToTop();
+
+    });
+
+    $('#back-top').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('html,body').animate({
+
+            scrollTop: 0
+
+        }, 700);
+
+    });
+
+}
+
+
+var stickyNavTop = $('#header').offset().top;
+var stickyNav = function(){
+var scrollTop = $(window).scrollTop();
+if (scrollTop > stickyNavTop) { 
+
+    $('#header').addClass('sticky');
+
+} else {
+
+    $('#header').removeClass('sticky'); 
+
+}
+
+};
+
+stickyNav();
+
+ 
+
+$(window).scroll(function() {
+
+    stickyNav();
+
+});
+
+$('a[href^="#applyBox"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100}, 1000);
+    }
+});
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 300) {
+        $('#sideNavi').fadeIn();
+    } else {
+        $('#sideNavi').fadeOut();
+    }
+
+});

@@ -1,0 +1,81 @@
+function select_courseform_func()
+{
+var select = document.getElementById("SelectProgram");
+var typevalue = select.options[select.selectedIndex].value;
+
+if (typevalue == 'bcom' )
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select architects-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='international-finance-and-accounting-accredited-by-acca-uk'>International Finance & Accounting (Accredited by ACCA, UK)</option>\
+<option value='general'>General</option>\
+</select>";
+}
+
+else if (typevalue == 'bca')
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='data-science-and-analytics'>Data Science and Analytics</option>\
+<option value='cloud-computing'>Cloud Computing</option>\
+<option value='cyber-security'>Cyber Security</option>\
+<option value='artificial-intelligence'>Artificial Intelligence</option>\
+<option value='computer-science-and-information-technology'>Computer Science &amp; Information Technology</option>\
+</select>";
+}
+
+else if (typevalue == 'bba')
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='healthcare-management'>Healthcare Management</option>\
+<option value='general-management'>General Management</option>\
+</select>";
+}
+
+else if (typevalue == 'mcom')
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='international-finance-accredited-by-acca-uk'>International Finance (Accredited by ACCA, UK)</option>\
+<option value='general'>General</option>\
+</select>";
+}
+
+else if (typevalue == 'mba')
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='human-resource-management'>Human Resource Management</option>\
+<option value='finance'>Finance</option>\
+<option value='marketing'>Marketing</option>\
+<option value='general-management'>General Management</option>\
+<option value='finance-and-marketing'>Finance and Marketing</option>\
+<option value='human-resource-management-and-finance'>Human Resource Management and Finance</option>\
+<option value='marketing-and-human-resource-management'>Marketing and Human Resource Management</option>\
+<option value='Marketing and Business Analytics'>Marketing and Business Analytics</option>\
+<option value='Finance and Business Analytics'>Finance and Business Analytics</option>\
+<option value='Human Resource and Business Analytics'>Human Resource and Business Analytics</option>\
+<option value='project-management'>Project Management</option>\
+<option value='Retail Management and Quick Commerce'>Retail Management and Quick Commerce</option>\
+<option value='information-technology-management'>Information Technology Management</option>\
+<option value='healthcare-management'>Healthcare Management</option>\
+<option value='Supply Chain Production and Operations Management'>Supply Chain Production and Operations Management</option>\
+<option value='business-intelligence-and-analytics'>Business Intelligence & Analytics</option>\
+<option value='Entrepreneurship and Venture Creation'>Entrepreneurship and Venture Creation</option>\
+<option value='international-finance-accredited-by-acca-uk'>International Finance (Accredited by ACCA, UK)</option>\
+<option value='MBA in AI-Driven Finance'>MBA in AI-Driven Finance</option>\
+<option value='MBA in AI-Driven Business Strategy'>MBA in AI-Driven Business Strategy</option>\
+<option value='MBA in AI-Driven Marketing'>MBA in AI-Driven Marketing</option>\
+</select>";
+}	
+
+else if (typevalue == 'mca')
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='computer-science-and-it'>Computer Science & IT</option>\
+<option value='devops'>DevOps</option>\
+<option value='cyber-security'>Cyber Security</option>\
+<option value='data-analytics'>Data Analytics</option>\
+<option value='NLP & LLM Development'>NLP & LLM Development</option>\
+</select>";
+}	
+
+else if (typevalue == 'ma')
+{
+document.getElementById("SelectElective").innerHTML="<select name='elective' id='SelectElective' class='form-select validate[required]'><option value='' selected='selected'>Select Elective*</option><option value='Jainology and Comparative Religions & Philosophy'>Jainology and Comparative Religions & Philosophy</option>\
+<option value='english'>English</option>\
+<option value='public-policy'>Public Policy</option>\
+<option value='economics'>Economics</option>\
+</select>";
+}	
+}

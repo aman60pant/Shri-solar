@@ -1,0 +1,342 @@
+// API URLs
+// const apiUrl = 'https://lead.learn.online/api/v1.0/university/?university_slug=shoolini';
+const stateUrl = 'https://api.countrystatecity.in/v1/countries/IN/states';
+const cityUrl = 'https://api.countrystatecity.in/v1/countries/IN/states/';
+
+const apiKey = 'RW54RWI5d09URDZSSlN1cFNPQnE3cHpDRXlFY0JTUmxCTE84YXRFYQ=='; // API key for state and city
+// let isPhoneVerified = false;
+// let isEmailVerified = false
+// Fetch university data for programs and electives
+const queryParams = new URLSearchParams(window.location.search);
+
+const source = queryParams.get('utm_source') || "";
+const medium = queryParams.get('utm_medium') || "";
+const campaign = queryParams.get('utm_campaign') || "";
+const adgroupid = queryParams.get('utm_adgroupid') || "";
+const creativeid = queryParams.get('utm_creativeid') || "";
+const device = queryParams.get('utm_device') || "";
+const network = queryParams.get('utm_network') || "";
+const campaignid = queryParams.get('utm_campaignid') || "";
+const matchtype = queryParams.get('utm_matchype') || "";
+const keyword = queryParams.get('utm_keyword') || "";
+const placement = queryParams.get('utm_placement') || "";
+
+
+// fetch(apiUrl)
+//     .then(response => response.json())
+//     .then(data => {
+//         const programs = data.data[0].programs;
+//         populatePrograms(programs);
+//     })
+//     .catch(error => console.error("Error fetching university data:", error));
+
+// Fetch state data on page load
+fetch(stateUrl, {
+    headers: {
+        'X-CSCAPI-KEY': apiKey
+    }
+})
+    .then(response => response.json())
+    .then(data => {
+        const states = data;
+        populateStates(states);
+    })
+    .catch(error => console.error("Error fetching state data:", error));
+
+// Function to populate the program select dropdown
+function populatePrograms(programs) {
+    const courseSelect = document.getElementById('courseid');
+    programs.forEach(program => {
+        const option = document.createElement('option');
+        option.value = program.program_slug;
+        option.textContent = program.program_name;
+        courseSelect.appendChild(option);
+    });
+
+    // Event listener to update electives when a program is selected
+    courseSelect.addEventListener('change', function () {
+        const selectedProgramSlug = this.value;
+        const selectedProgram = programs.find(program => program.program_slug === selectedProgramSlug);
+        populateElectives(selectedProgram ? selectedProgram.program_elective : []);
+    });
+}
+
+// Function to populate the electives based on the selected program
+function populateElectives(electives) {
+    const electiveSelect = document.getElementById('electiveid');
+    electiveSelect.innerHTML = '<option value="" selected>Select Elective*</option>';
+
+    if (electives.length > 0) {
+        electives.forEach(elective => {
+            const option = document.createElement('option');
+            option.value = elective.elective_slug;
+            option.textContent = elective.elective_name;
+            electiveSelect.appendChild(option);
+        });
+    } else {
+        const noOption = document.createElement('option');
+        noOption.value = '';
+        noOption.textContent = 'No electives available';
+        electiveSelect.appendChild(noOption);
+    }
+}
+
+// Function to populate the state select dropdown
+function populateStates(states) {
+    const stateSelect = document.getElementById('stateid');
+    stateSelect.innerHTML = '<option value="" selected>Select State*</option>';
+
+    states.forEach(state => {
+        const option = document.createElement('option');
+        option.value = state.name;            // Use full name as value
+        option.textContent = state.name;
+        option.setAttribute('data-code', state.iso2); // Store iso2 code if needed
+        stateSelect.appendChild(option);
+    });
+
+    // Event listener to update cities when a state is selected
+    stateSelect.addEventListener('change', function () {
+        const selectedOption = this.options[this.selectedIndex];
+        const stateCode = selectedOption.getAttribute('data-code'); // Use code for API
+        if (stateCode) {
+            fetchCities(stateCode);
+        }
+    });
+}
+
+// Fetch cities based on selected state
+function fetchCities(stateCode) {
+    const url = `${cityUrl}${stateCode}/cities`;
+
+    fetch(url, {
+        headers: {
+            'X-CSCAPI-KEY': apiKey
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            populateCities(data);
+        })
+        .catch(error => console.error("Error fetching city data:", error));
+}
+
+// Function to populate the city select dropdown
+function populateCities(cities) {
+    const citySelect = document.getElementById('cityid');
+    citySelect.innerHTML = '<option value="" selected>Select City*</option>';
+
+    if (cities.length > 0) {
+        cities.forEach(city => {
+            const option = document.createElement('option');
+            option.value = city.name;           // Use full name as value
+            option.textContent = city.name;
+            citySelect.appendChild(option);
+        });
+    } else {
+        const noOption = document.createElement('option');
+        noOption.value = '';
+        noOption.textContent = 'No cities available';
+        citySelect.appendChild(noOption);
+    }
+}
+
+function startOtpTimer(button, duration) {
+    let remainingTime = duration;
+    button.disabled = true; // Disable the button
+    button.textContent = `Retry in ${remainingTime}s`; // Update button text
+
+    const timerInterval = setInterval(() => {
+        remainingTime--;
+        button.textContent = `Retry in ${remainingTime}s`;
+
+        if (remainingTime <= 0) {
+            clearInterval(timerInterval);
+            button.disabled = false; // Re-enable the button
+            button.textContent = "Get OTP"; // Reset button text
+        }
+    }, 1000); // Update every second
+}
+
+
+// Send email OTP
+function sendEmailOTP() {
+    const email = document.querySelector('input[name="email"]').value;
+    const emailOtpButton = document.getElementById('emailOtpButton');
+    if (email) {
+        fetch('https://lead.learn.online/api/v1.0/lead/otp/send/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'OTP sent successfully to email') {
+                    alert("Email OTP sent successfully!");
+                    startOtpTimer(emailOtpButton, 60);
+                } else {
+                    alert("Failed to send OTP. Please try again.");
+                }
+            })
+            .catch(error => {
+                alert("Error sending email OTP.");
+            });
+    }
+}
+
+// Verify email OTP
+function verifyEmailOTP() {
+    const email = document.querySelector('input[name="email"]').value;
+    const emailOtp = document.querySelector('input[name="email_otp"]').value;
+
+    if (email && emailOtp) {
+        fetch('https://lead.learn.online/api/v1.0/lead/otp/verify/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, otp: emailOtp })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+
+                if (data.status === 400) {
+                    alert(data.message)
+                } else {
+                    $('#verify_email').hide();
+                    $('#verified_email').show();
+                    isEmailVerified = true
+                }
+
+            })
+            .catch(error => {
+                alert("Error verifying email OTP.");
+            });
+    }
+}
+
+// Send phone OTP
+function sendMobileOTP() {
+    const phone = document.querySelector('input[name="phone"]').value;
+    const phoneOtpButton = document.getElementById('phoneOtpButton');
+    if (phone) {
+        fetch('https://lead.learn.online/api/v1.0/lead/otp/send/phone', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ phone })
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert("Mobile OTP sent successfully!");
+                startOtpTimer(phoneOtpButton, 60);
+            })
+            .catch(error => {
+                alert("Error sending mobile OTP.");
+            });
+    }
+}
+
+// Verify phone OTP
+function verifyMobileOTP() {
+    const phone = document.querySelector('input[name="phone"]').value;
+    const mobileOtp = document.querySelector('input[name="mobile_otp"]').value;
+
+    if (phone && mobileOtp) {
+        fetch('https://lead.learn.online/api/v1.0/lead/otp/verify/phone', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ phone, otp: mobileOtp })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message == "OTP verified successfully") {
+                    $('#verify_phone').hide();
+                    $('#verified_phone').show();
+                    isPhoneVerified = true
+                } else {
+                    alert(data.message)
+                }
+            })
+            .catch(error => {
+                alert("Error verifying mobile OTP.");
+            });
+    }
+}
+
+
+$('#formID').submit(function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Validate form inputs
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const mobile = $('#phone').val(); // Corrected to "mobile" for API compliance
+
+    // Check for required fields
+    if (!name || !email || !mobile) {
+        alert('Name, Email, and Mobile are required fields!');
+        return;
+    }
+
+
+
+    // Prepare form data for the API
+    const formData = {
+        name: name,
+        email: email,
+        phone: mobile,
+        // programName: $('#courseid').val(),
+        // programElective: $('#electiveid').val(),
+        programName: "mba",
+        state: $('#stateid').val(),
+        city: $('#cityid').val(),
+        region: $('#regionid').val(),
+        university: "shoolini",
+        utmMedium: medium,
+        utmCampaign: campaign,
+        utmSource: source,
+        utmPlacement: placement,
+        utmKeyword: keyword,
+        utmMatchType: matchtype,
+        utmCampaignId: campaignid,
+        utmNetwork: network,
+        utmDevice: device,
+        utmCreativeId: creativeid,
+        utmAdgroupId: adgroupid
+    };
+    // Send the AJAX request
+    $.ajax({
+        url: 'https://lead.learn.online/api/v1.0/lead/', // Lead generation API endpoint
+        type: 'POST',
+        contentType: 'application/json', // Ensure data is sent as JSON
+        data: JSON.stringify(formData), // Convert form data to JSON string
+        success: function (response) {
+            console.log('Lead Created Successfully:', response);
+            // gtag('event', 'conversion', {'send_to': 'AW-16644178193/cbbXCJKUlMMZEJGCyIA-'});
+            console.log('Conversion event triggered');
+            // Redirect to the Thank You page
+            // window.location.href = response.url; // Replace with your Thank You page URL
+            window.location.href = "/mba/thankyou.html"; 
+        },
+        error: function (xhr, status, error) {
+            // Display error details
+            const response = JSON.parse(xhr.responseText);
+            console.error('Error Details:', response);
+            alert('Error: ' + response.message);
+
+            // Optionally log validation errors
+            if (response.details) {
+                response.details.forEach((detail) => {
+                    console.error(`Field: ${detail.field}, Message: ${detail.message}`);
+                });
+            }
+        }
+    });
+});
+
