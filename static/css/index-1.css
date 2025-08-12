@@ -212,7 +212,7 @@
     .card-points li {
       margin-bottom: 5px;
     }
-    
+
     .solar-pricing {
       background: #f7fcfe;
       padding: 50px 8px;
@@ -355,8 +355,5 @@
         margin-bottom: 22px;
       }
     }
-    .img-div {
-            border: 2px solid red;
-            padding: 0px;
-            box-sizing: border-box;
-          }
+
+    

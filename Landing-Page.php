@@ -56,6 +56,165 @@
   <script type="text/javascript" async="" src="./static/javascript/f.txt"></script>
   <script type="text/javascript" async="" src="./static/javascript/f(1).txt"></script>
   <script type="text/javascript" async="" src="./static/javascript/f(2).txt"></script>
+  <style>
+    .img-div {
+      border: 2px solid red;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+
+    /* ===== Facility Section Red Theme ===== */
+    .facility-section {
+      background-color: #b30000;
+      /* Red Theme */
+      padding: 60px 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .facility-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .facility-heading {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3 cards in a row */
+      gap: 20px;
+    }
+
+    .facility-card {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .facility-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .facility-icon {
+      font-size: 2rem;
+      color: #b30000;
+      margin-bottom: 10px;
+    }
+
+    .facility-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .facility-points {
+      list-style: none;
+      padding: 0;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    .facility-points li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ====== About Us Red Theme Styles ====== */
+    .aboutus-section {
+      background-color: #b30000;
+      /* Red Theme Background */
+      color: white;
+      padding: 60px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .aboutus-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .aboutus-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .aboutus-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .aboutus-subtitle {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .aboutus-description {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .aboutus-services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: white;
+      color: black;
+      text-align: center;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 12px;
+      border-top: 3px solid #b30000;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+  </style>
 </head>
 
 
@@ -325,7 +484,7 @@
 
 
 
-  <section
+  <!-- <section
     class="relative py-8 after:absolute after:bg-red after:w-full md:after:h-[70%] after:h-full after:top-0 after:left-0">
     <div class="container mx-auto">
       <div class="relative flex items-center md:flex-auto flex-wrap justify-between mb-6 z-10 aos-init"
@@ -491,7 +650,85 @@
         </div>
       </div>
     </div>
+  </section> -->
+
+  <!-- ====== About Us Section (Red Theme) ====== -->
+  <section class="aboutus-section">
+    <div class="aboutus-container">
+
+      <!-- Heading -->
+      <div class="aboutus-header">
+        <h2 class="aboutus-title">About Us <br> SOLAR SOLUTIONS PROVIDER</h2>
+        <p class="aboutus-subtitle">
+          Delivering Tailored Solar Energy Solutions in Uttarakhand<br>
+          The Best Solar Company in Uttarakhand for Reliable &amp; Affordable Solar Solutions
+        </p>
+      </div>
+
+      <!-- Description -->
+      <div class="aboutus-description">
+        <p>
+          Uttarakhand, with its abundant sunlight and growing focus on renewable energy, is an ideal region for harnessing solar power.
+          At <strong>Shri Solar</strong>, we specialize in delivering customized solar energy solutions that meet the unique needs of
+          residential, commercial, and industrial customers across the state.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="aboutus-services">
+        <div class="service-card">
+          <img src="./add-images/Solar Panel Installation.png" alt="Solar Panel Installation">
+          <h3>Solar Panel Installation</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Solar Maintenance & Support.png" alt="Solar Maintenance & Support">
+          <h3>Solar Maintenance & Support</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Renewable Energy Solutions.png" alt="Renewable Energy Solutions">
+          <h3>Renewable Energy Solutions</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Energy Storage Solutions.png" alt="Energy Storage Solutions">
+          <h3>Energy Storage Solutions</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Commercial Solar Solutions.png" alt="Commercial Solar Solutions">
+          <h3>Commercial Solar Solutions</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Residential Solar Systems.png" alt="Residential Solar Systems">
+          <h3>Residential Solar Systems</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/EV Charging with Solar Power.png" alt="EV Charging with Solar Power">
+          <h3>EV Charging with Solar Power</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Off-Grid Solar Power.png" alt="Off-Grid Solar Power">
+          <h3>Off-Grid Solar Power</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Solar Street Lightning.png" alt="Solar Street Lighting">
+          <h3>Solar Street Lighting</h3>
+        </div>
+
+        <div class="service-card">
+          <img src="./add-images/Solar Water Pumping Systems.png" alt="Solar Water Pumping Systems">
+          <h3>Solar Water Pumping Systems</h3>
+        </div>
+      </div>
+    </div>
   </section>
+
 
   <section class="relative md:my-0 my-8">
     <div class="container mx-auto">
@@ -732,7 +969,7 @@
 
   </section>
 
-  <section class="relative py-10">
+  <!-- <section class="relative py-10">
     <div class="container mx-auto z-20 relative">
       <div
         class="rounded-4xl relative overflow-hidden py-8 after:bg-[url(&#39;../add-images/pattenbg.png&#39;)] after:bg-cover after:bg-no-repeat after:bg-fixed after:bg-center after:absolute bg-[rgba(220,9,39,0.9)] after:w-full after:h-full after:top-0 after:left-0">
@@ -846,7 +1083,69 @@
         </div>
       </div>
     </div>
+  </section> -->
+
+
+
+  <!-- ====== Facility Section (Red Theme) ====== -->
+  <section class="facility-section">
+    <div class="facility-container">
+      <h2 class="facility-heading">Providing Comfortable Facility</h2>
+
+      <div class="facility-grid">
+        <!-- Card 1 -->
+        <div class="facility-card">
+          <div class="facility-icon"><i class="fa fa-shield-alt"></i></div>
+          <h3 class="facility-title">Solar-Powered Water Pump</h3>
+          <ul class="facility-points">
+            <li>Use solar panels to run a DC water pump for agricultural irrigation.</li>
+            <li>Can be optimized for drip irrigation systems.</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="facility-card">
+          <div class="facility-icon"><i class="fa fa-chart-pie"></i></div>
+          <h3 class="facility-title">Solar Tracking System</h3>
+          <ul class="facility-points">
+            <li>A dual-axis solar tracker that automatically adjusts the panel's angle to follow the sun.</li>
+            <li>Improves efficiency by 30–40%.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="facility-card">
+          <div class="facility-icon"><i class="fa fa-code"></i></div>
+          <h3 class="facility-title">Smart Solar Street Light with Motion Sensors</h3>
+          <ul class="facility-points">
+            <li>Lights up only when movement is detected, helping to save energy and extend battery life.</li>
+            <li>Includes solar panel, battery, and microcontroller.</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="facility-card">
+          <div class="facility-icon"><i class="fa fa-house"></i></div>
+          <h3 class="facility-title">Solar Rooftop for Rural Homes</h3>
+          <ul class="facility-points">
+            <li>Evaluate feasibility and create a deployment plan for a small village.</li>
+            <li>Include ROI and energy independence analysis.</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="facility-card">
+          <div class="facility-icon"><i class="fa fa-search"></i></div>
+          <h3 class="facility-title">Portable Solar Charger for Remote Areas</h3>
+          <ul class="facility-points">
+            <li>Build a compact, foldable solar charger for phones and lanterns.</li>
+            <li>Ideal for disaster relief or rural deployment.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
+
 
   <section class="solar-pricing">
     <div class="container">
@@ -912,7 +1211,7 @@
 
   <div class="fixed left-20 z-10 bottom-28 w-10">
     <a
-      href="https://api.whatsapp.com/send?phone=918951236684&amp;utm_source=Whatsapp&amp;app_absent=0&amp;text=I%E2%80%99m%20interested%20in%20learning%20more%20about%20the%20Shoolini%20online%20courses."><img
+      href="https://api.whatsapp.com/send?phone=9958552010&amp;utm_source=Whatsapp&amp;app_absent=0&amp;text=I%E2%80%99m%20interested%20in%20learning%20more%20about%20the%20Shoolini%20online%20courses."><img
         title="whatsapp" src="./add-images/whatsapp.svg" alt="whatsapp"></a>
   </div>
 
