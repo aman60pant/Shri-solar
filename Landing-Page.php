@@ -9,6 +9,13 @@
   <script type="text/javascript" async="" src="./static/javascript/js"></script>
   <script async="" src="./static/javascript/gtm.js.download"></script>
   <script>
+    window.addEventListener('load', () => {
+      AOS.init({
+        duration: 1000,
+        offset: 100,
+      });
+    });
+
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
