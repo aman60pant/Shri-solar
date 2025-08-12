@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0381)https://onlineshoolini.com/mba/?utm_source=Meta&utm_medium=Facebook_Right_Column&utm_campaign=Shoolini_Exe_MBA_020825+-+landing+page&utm_content=Shoolini_Exe_MBA&utmadset=Shoolini_Exe_MBA&utm_id=120230002940280689&utm_term=120230002940260689&fbclid=IwY2xjawMEEF9leHRuA2FlbQEwAGFkaWQBqyS6N8QGcQEeaO41_imYDR4QwytYK_0wIrhMQt7S_73lq-cZ4i9JattN3P2PqWcJXLrrlcM_aem_s2vDN4f7t-VOS_012mOEPQ -->
 <html lang="en">
 
 <head>
@@ -29,7 +28,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoolini University Online</title>
+  <title>Shri Solar</title>
   <!-- <link rel="icon" type="image/x-icon" href="https://onlineshoolini.com/mba/add-images/favicon.png"> -->
   <link href="./static/css/output.css" rel="stylesheet">
   <link href="./static/css/aos.css" rel="stylesheet">
