@@ -107,7 +107,7 @@
 
   <section
     class="relative overflow-hidden md:h-[680px] bg-[url(&#39;../mba/add-images/BannerImage.jpg&#39;)] bg-cover bg-no-repeat bg-center after:absolute md:after:w-[45%] after:w-[100%] after:h-full after:right-0 after:top-0 md:after:bg-red after:bg-[rgba(255,255,255,0.6)] md:after:rounded-l-[50%] after:rounded-l-[0%]">
-    <div class="container mx-auto" style="padding: 0;">
+    <div class="container mx-auto" style="padding: 0; margin: 0;">
       <div class="hidden lg:block absolute bottom-0 z-10">
         <img src="./add-images/banner_main.png" alt="banner" class="">
       </div>
@@ -126,7 +126,7 @@
             </h1>
           </div>
           <div class="inline-block w-full">
-            <h1 class="text-white bg-red md:text-5xl text-5xl inline-block uppercase px-5 py-1 font-bold mt-[2%]">
+            <h1 class="text-white bg-red md:text-5xl text-5xl inline-block uppercase px-5 py-1 font-bold mt-[2%] whitespace-nowrap">
               IN UTTARAKHAND
             </h1>
           </div>
