@@ -2887,17 +2887,17 @@
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\'\.\.\/images\/bannerBg\.webp\'\)\] {
-    background-image: url('../images/bannerBg.webp');
+  .bg-\[url\(\'\.\.\/add-images\/bannerBg\.webp\'\)\] {
+    background-image: url('../add-images/bannerBg.webp');
   }
-  .bg-\[url\(\'\.\.\/images\/bg-rec\.png\'\)\] {
-    background-image: url('../images/bg-rec.png');
+  .bg-\[url\(\'\.\.\/add-images\/bg-rec\.png\'\)\] {
+    background-image: url('../add-images/bg-rec.png');
   }
-  .bg-\[url\(\'\.\.\/images\/bgg\.png\'\)\] {
-    background-image: url('../images/bgg.png');
+  .bg-\[url\(\'\.\.\/add-images\/bgg\.png\'\)\] {
+    background-image: url('../add-images/bgg.png');
   }
-  .bg-\[url\(\'\.\.\/images\/testimonial_2\.webp\'\)\] {
-    background-image: url('../images/testimonial_2.webp');
+  .bg-\[url\(\'\.\.\/add-images\/testimonial_2\.webp\'\)\] {
+    background-image: url('../add-images/testimonial_2.webp');
   }
   .bg-none {
     background-image: none;
@@ -4141,10 +4141,10 @@
       background-color: var(--color-white);
     }
   }
-  .after\:bg-\[url\(\'\.\.\/images\/pattenbg\.png\'\)\] {
+  .after\:bg-\[url\(\'\.\.\/add-images\/pattenbg\.png\'\)\] {
     &::after {
       content: var(--tw-content);
-      background-image: url('../images/pattenbg.png');
+      background-image: url('../add-images/pattenbg.png');
     }
   }
   .after\:bg-cover {

@@ -30,7 +30,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shoolini University Online</title>
-  <!-- <link rel="icon" type="image/x-icon" href="https://onlineshoolini.com/mba/images/favicon.png"> -->
+  <!-- <link rel="icon" type="image/x-icon" href="https://onlineshoolini.com/mba/add-images/favicon.png"> -->
   <link href="./static/css/output.css" rel="stylesheet">
   <link href="./static/css/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/swiper-bundle.min.css">
@@ -446,14 +446,14 @@
       <div class="container mx-auto">
         <div class="grid grid-cols-3 items-center gap-4">
           <div class="logo col-span-2 relative">
-            <img class="md:h-[110px] h-auto" src="./images/solar_main_logo_without_bg.png" alt="Company logo">
+            <img class="md:h-[110px] h-auto" src="./add-images/solar_main_logo_without_bg.png" alt="Company logo">
           </div>
 
           <div class="relative text-end">
             <a class="bg-white rounded-lg hover:bg-blu text-[18px] hover:text-white text-blu py-2 md:pe-5 pe-0 ps-12 relative phonedv"
               href="tel:+91 9958552010">
               <span class="absolute left-[5px] top-[3px]"><img class="w-[35px]"
-                  src="./images/phone-icon.svg" alt=""></span><span
+                  src="./add-images/phone-icon.svg" alt=""></span><span
                 class="md:inline-block hidden">+91 9958552010</span>
             </a>
           </div>
@@ -463,10 +463,10 @@
   </header>
 
   <section
-    class="relative overflow-hidden md:h-[680px] bg-[url(&#39;../mba/images/BannerImage.jpg&#39;)] bg-cover bg-no-repeat bg-center after:absolute md:after:w-[45%] after:w-[100%] after:h-full after:right-0 after:top-0 md:after:bg-red after:bg-[rgba(255,255,255,0.6)] md:after:rounded-l-[50%] after:rounded-l-[0%]">
+    class="relative overflow-hidden md:h-[680px] bg-[url(&#39;../mba/add-images/BannerImage.jpg&#39;)] bg-cover bg-no-repeat bg-center after:absolute md:after:w-[45%] after:w-[100%] after:h-full after:right-0 after:top-0 md:after:bg-red after:bg-[rgba(255,255,255,0.6)] md:after:rounded-l-[50%] after:rounded-l-[0%]">
     <div class="container mx-auto" style="padding: 0;">
       <div class="hidden lg:block absolute bottom-0 z-10">
-        <img src="./images/banner_main.png" alt="banner" class="">
+        <img src="./add-images/banner_main.png" alt="banner" class="">
       </div>
       <div class="flex flex-col lg:flex-row justify-between items-center relative z-10">
         <div class="md:mt-[5%] mt-[30%] md:text-start text-center">
@@ -713,7 +713,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="9">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Solar Panel Installation.png" alt="">
+                    <img class="w-full" src="./add-images/Solar Panel Installation.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -726,7 +726,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="10">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Solar Maintenance & Support.png" alt="">
+                    <img class="w-full" src="./add-images/Solar Maintenance & Support.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -739,7 +739,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="11">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Renewable Energy Solutions.png" alt="">
+                    <img class="w-full" src="./add-images/Renewable Energy Solutions.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -752,7 +752,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="12">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Energy Storage Solutions.png" alt="">
+                    <img class="w-full" src="./add-images/Energy Storage Solutions.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -765,7 +765,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="13">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Commercial Solar Solutions.png" alt="">
+                    <img class="w-full" src="./add-images/Commercial Solar Solutions.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">Commercial Solar Solutions</h3>
@@ -776,7 +776,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="14">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Residential Solar Systems.png" alt="">
+                    <img class="w-full" src="./add-images/Residential Solar Systems.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -789,7 +789,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="15">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/EV Charging with Solar Power.png" alt="">
+                    <img class="w-full" src="./add-images/EV Charging with Solar Power.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -802,7 +802,7 @@
                 style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="0">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Off-Grid Solar Power.png" alt="">
+                    <img class="w-full" src="./add-images/Off-Grid Solar Power.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -815,7 +815,7 @@
                 aria-label="2 / 16" style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="1">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Solar Street Lightning.png" alt="">
+                    <img class="w-full" src="./add-images/Solar Street Lightning.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -828,7 +828,7 @@
                 aria-label="3 / 16" style="width: 282.25px; margin-right: 20px;" data-swiper-slide-index="2">
                 <div class="relative text-center md:py-5 py-0">
                   <div class="w-full">
-                    <img class="w-full" src="./images/Solar Water Pumping Systems.png" alt="">
+                    <img class="w-full" src="./add-images/Solar Water Pumping Systems.png" alt="">
                   </div>
                   <div class="bg-white shadow-lg py-3 mx-2 relative -mt-7 border-b-2 border-red">
                     <h3 class="text-base font-semibold">
@@ -853,7 +853,7 @@
   <section class="relative md:my-0 my-8">
     <div class="container mx-auto">
       <div
-        class="relative overflow-hidden py-8 md:px-16 px-5 bg-[url(&#39;../images/bg-rec.png&#39;)] bg-cover bg-fixed bg-no-repeat bg-center bg-white shadow rounded-4xl bg-blend-difference">
+        class="relative overflow-hidden py-8 md:px-16 px-5 bg-[url(&#39;../add-images/bg-rec.png&#39;)] bg-cover bg-fixed bg-no-repeat bg-center bg-white shadow rounded-4xl bg-blend-difference">
         <div class="relative text-center mb-6 z-10 aos-init" data-aos="fade-up">
           <h2
             class="font-bold relative md:text-3xl text-2xl text-black inline-block pb-4 after:absolute after:bg-white after:w-[60%] after:h-[2px] after:left-[20%] after:bottom-[-2px]">
@@ -865,27 +865,27 @@
           <div class="grid md:grid-cols-5 grid-cols-2 gap-3">
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"
               class="relative bg-white image-box border-[1px] border-[#c0c0c0] rounded-2xl aos-init">
-              <img class="mx-auto" src="./images/about-1.png" alt="">
+              <img class="mx-auto" src="./add-images/about-1.png" alt="">
             </div>
 
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"
               class="relative bg-white image-box border-[1px] border-[#c0c0c0] rounded-2xl aos-init">
-              <img class="mx-auto" src="./images/about-2.png" alt="">
+              <img class="mx-auto" src="./add-images/about-2.png" alt="">
             </div>
 
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"
               class="relative bg-white image-box border-[1px] border-[#c0c0c0] rounded-2xl aos-init">
-              <img class="mx-auto" src="./images/about-3.png" alt="">
+              <img class="mx-auto" src="./add-images/about-3.png" alt="">
             </div>
 
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400"
               class="relative bg-white image-box border-[1px] border-[#c0c0c0] rounded-2xl aos-init">
-              <img class="mx-auto" src="./images/about-4.png" alt="">
+              <img class="mx-auto" src="./add-images/about-4.png" alt="">
             </div>
 
             <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500"
               class="relative bg-white image-box border-[1px] border-[#c0c0c0] rounded-2xl aos-init">
-              <img class="mx-auto" src="./images/about-5.png" alt="">
+              <img class="mx-auto" src="./add-images/about-5.png" alt="">
             </div>
           </div>
         </div>
@@ -894,7 +894,7 @@
   </section>
 
   <section
-    class="relative py-10 bg-[url(&#39;../images/bgg.png&#39;)] bg-cover bg-no-repeat bg-fixed bg-center after:absolute after:bg-[rgba(220,9,39,0.9)] after:w-full after:h-full after:top-0 after:left-0">
+    class="relative py-10 bg-[url(&#39;../add-images/bgg.png&#39;)] bg-cover bg-no-repeat bg-fixed bg-center after:absolute after:bg-[rgba(220,9,39,0.9)] after:w-full after:h-full after:top-0 after:left-0">
     <div class="w-full h-[100px] bg-white absolute top-0 left-0 z-10 md:block hidden"></div>
     <div class="container mx-auto z-20 relative">
       <div class="flex flex-col-reverse lg:flex-row lg:justify-between items-center">
@@ -943,7 +943,7 @@
           </div> -->
         </div>
         <div data-aos="zoom-in" class="img-div w-full md:w-[80%] lg:w-[40%] md:block hidden aos-init aos-animate">
-          <img class="" src="./images/8.webp" alt="Eligibility Criteria">
+          <img class="" src="./add-images/8.webp" alt="Eligibility Criteria">
         </div>
       </div>
     </div>
@@ -952,7 +952,7 @@
 
   <section>
     <div class="w-full hidden lg:block absolute">
-      <img src="./images/BGsolariniAdv.jpg" alt="" style="height: 450px; width: 100%">
+      <img src="./add-images/BGsolariniAdv.jpg" alt="" style="height: 450px; width: 100%">
     </div>
     <div>
       <div class="relative text-center mb-6 z-10 aos-init aos-animate mt-4">
@@ -1092,7 +1092,7 @@
   <section class="relative py-10">
     <div class="container mx-auto z-20 relative">
       <div
-        class="rounded-4xl relative overflow-hidden py-8 after:bg-[url(&#39;../images/pattenbg.png&#39;)] after:bg-cover after:bg-no-repeat after:bg-fixed after:bg-center after:absolute bg-[rgba(220,9,39,0.9)] after:w-full after:h-full after:top-0 after:left-0">
+        class="rounded-4xl relative overflow-hidden py-8 after:bg-[url(&#39;../add-images/pattenbg.png&#39;)] after:bg-cover after:bg-no-repeat after:bg-fixed after:bg-center after:absolute bg-[rgba(220,9,39,0.9)] after:w-full after:h-full after:top-0 after:left-0">
         <div class="relative text-center mb-6 z-10 aos-init" data-aos="fade-up">
           <h2
             class="font-bold relative md:text-3xl text-2xl text-white inline-block pb-4 after:absolute after:bg-white after:w-[60%] after:h-[2px] after:left-[20%] after:bottom-[-2px]">
@@ -1270,7 +1270,7 @@
   <div class="fixed left-20 z-10 bottom-28 w-10">
     <a
       href="https://api.whatsapp.com/send?phone=918951236684&amp;utm_source=Whatsapp&amp;app_absent=0&amp;text=I%E2%80%99m%20interested%20in%20learning%20more%20about%20the%20Shoolini%20online%20courses."><img
-        title="whatsapp" src="./images/whatsapp.svg" alt="whatsapp"></a>
+        title="whatsapp" src="./add-images/whatsapp.svg" alt="whatsapp"></a>
   </div>
 
   <script src="./static/javascript/flowbite.min.js.download"></script>
