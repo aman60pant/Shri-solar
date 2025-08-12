@@ -9,7 +9,7 @@
   <script type="text/javascript" async="" src="./static/javascript/js"></script>
   <script async="" src="./static/javascript/gtm.js.download"></script>
   <script>
-    (function (w, d, s, l, i) {
+    (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
         "gtm.start": new Date().getTime(),
@@ -42,9 +42,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script src="./static/javascript/jquery.min.js.download"></script>
-  
-  
-  
+
+
+
   <link rel="stylesheet" href="static/css/index-1.css">
   <script type="text/javascript" async="" src="./static/javascript/f.txt"></script>
   <script type="text/javascript" async="" src="./static/javascript/f(1).txt"></script>
@@ -916,7 +916,15 @@
   <script src="./static/javascript/custom.js.download"></script>
 
   <script type="text/javascript" id=""
-    charset="">!function (b, e, f, g, a, c, d) { b.fbq || (a = b.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d)) }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js"); fbq("init", "2258336307950320"); fbq("track", "PageView");</script>
+    charset="">
+    ! function(b, e, f, g, a, c, d) {
+      b.fbq || (a = b.fbq = function() {
+        a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
+      }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d))
+    }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", "2258336307950320");
+    fbq("track", "PageView");
+  </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=2258336307950320&amp;ev=PageView&amp;noscript=1"></noscript>
   <script src="./static/javascript/courseform.js.download"></script>
